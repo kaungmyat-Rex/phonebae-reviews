@@ -128,7 +128,7 @@ function AddData() {
                 <button className="button-121" onClick={() => sendingdata()}>
                   send
                 </button>
-                <button onClick={() => testfun()}>test submit</button>
+                {/* <button>test submit</button> */}
               </div>
             </div>
           </div>
