@@ -3,6 +3,8 @@ import axios from "axios";
 import AdminNav from "../components/AdminNav";
 import SideAdminNav from "../components/SideAdminNav";
 import Footer from "../components/Footer";
+import { storage } from "../components/firebase";
+import { ref, uploadBytes, getDownloadURL } from "firebase/storage";
 
 function AddData() {
   const [name, setName] = useState("");
@@ -14,6 +16,8 @@ function AddData() {
   const [goodstuff, setGoodstuff] = useState("");
   const [badstuff, setBadstuff] = useState("");
   const [image, setImage] = useState("");
+  const [storeimage, setStoreimage] = useState(null);
+  const [linkimage, setLinkimage] = useState("");
 
   const sendingdata = () => {
     const formData = new FormData();
@@ -29,13 +33,24 @@ function AddData() {
 
     /******* post data request to server api*/
     axios
-      .post("https://phonebaereview.herokuapp.com/api/upload", formData)
+      .post("https://kind-rose-scallop.cyclic.app/upload", formData)
       .then((res) => {
         alert("File Upload success");
       })
       .catch((err) => alert("File Upload Error"));
   };
 
+  const testfun = async () => {
+    const imgref = ref(storage, `storeImg/${storeimage.name + Date.now()}`);
+
+    uploadBytes(imgref, storeimage).then(() => {
+      alert("image uploaded");
+    });
+    await getDownloadURL(imgref).then((url) => {
+      setLinkimage(url);
+    });
+  };
+  console.log(linkimage);
   return (
     <div>
       <AdminNav />
@@ -106,13 +121,14 @@ function AddData() {
                   <h3>Import Images of the phone</h3>
                   <input
                     type="file"
-                    onChange={(e) => setImage(e.target.files[0])}
+                    onChange={(e) => setStoreimage(e.target.files[0])}
                   />
                 </div>
 
                 <button className="button-121" onClick={() => sendingdata()}>
                   send
                 </button>
+                <button onClick={() => testfun()}>test submit</button>
               </div>
             </div>
           </div>

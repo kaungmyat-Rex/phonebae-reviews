@@ -9,7 +9,7 @@ function Reviews({ phoneData, phoneloading }) {
   const [seemoreCount, setSeemoreCount] = useState(3);
   const [inputText, setInputText] = useState("");
   const [inputChecker, setInputChecker] = useState(true);
-  const [arrayChecker, setArrayChecker] = useState(true);
+
   const slicedata = phoneData.slice(0, seemoreCount);
   const navigate = useNavigate();
   const ToseemoreReview = () => {
@@ -65,7 +65,7 @@ function Reviews({ phoneData, phoneloading }) {
                       <div className="image-div">
                         <img
                           className="image"
-                          src={`https://phonebaereview.herokuapp.com/Images/${e.img}`}
+                          src={`https://kind-rose-scallop.cyclic.app/Images/${e.img}`}
                           alt="image"
                         />
                       </div>
@@ -106,7 +106,7 @@ function Reviews({ phoneData, phoneloading }) {
                         <div className="image-div">
                           <img
                             className="image"
-                            src={`https://phonebaereview.herokuapp.com/Images/${e.img}`}
+                            src={`https://kind-rose-scallop.cyclic.app/Images/${e.img}`}
                             alt="image"
                           />
                         </div>

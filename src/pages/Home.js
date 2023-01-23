@@ -1,51 +1,18 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useState } from "react";
 import Nav from "../components/Nav";
 import PhoneReview from "../images/PhoneReview.png";
-import { SiGlassdoor, SiNike } from "react-icons/si";
+import { SiNike } from "react-icons/si";
 import { MdOutlineArrowBackIosNew } from "react-icons/md";
 import { MdOutlineArrowForwardIos } from "react-icons/md";
 import { ImNewspaper } from "react-icons/im";
 import Footer from "../components/Footer";
 
 import { Link, useNavigate } from "react-router-dom";
-import Single from "./Single";
-import axios from "axios";
+
 import Loading from "../components/Loading";
 
 function Home({ sliceData, phoneData, newloading, phoneloading }) {
-  const [singleData, setSingleData] = useState("");
-  // const { setNameContext } = useContext(Memorycontext);
-  // const { setRatingContext } = useContext(Memorycontext);
-  // const { setTipsContext } = useContext(Memorycontext);
-  // const { setInforContext } = useContext(Memorycontext);
-  // const { setPriceContext } = useContext(Memorycontext);
-  // const { setAuthorContext } = useContext(Memorycontext);
-  // const { setGoodstuffContext } = useContext(Memorycontext);
-  // const { setBadstuffContext } = useContext(Memorycontext);
-  // const { setImgContext } = useContext(Memorycontext);
-
   const navigate = useNavigate();
-  // const ReadMoreFun = (
-  //   name,
-  //   img,
-  //   rating,
-  //   author,
-  //   tips,
-  //   info,
-  //   price,
-  //   good,
-  //   bad
-  // ) => {
-  //   setNameContext(name);
-  //   setRatingContext(rating);
-  //   setTipsContext(tips);
-  //   setInforContext(info);
-  //   setPriceContext(price);
-  //   setAuthorContext(author);
-  //   setGoodstuffContext(good);
-  //   setBadstuffContext(bad);
-  //   setImgContext(img);
-  // };
 
   return (
     <div>
@@ -110,8 +77,8 @@ function Home({ sliceData, phoneData, newloading, phoneloading }) {
                       <ImNewspaper className="newsicon" />
                       <h3 className="recent-news">Recent News</h3>
                     </div>
-                    <h3 className="news-date">{e.dateTime}</h3>
-                    <p className="news-title">{e.title.substring(0, 100)}...</p>
+                    <h3 className="news-date">{e.datePublished}</h3>
+                    <p className="news-title">{e.name.substring(0, 100)}...</p>
                     <MdOutlineArrowBackIosNew className="arrow-front-B" />
                     <MdOutlineArrowForwardIos className="arrow-back-B" />
                   </div>
@@ -152,7 +119,7 @@ function Home({ sliceData, phoneData, newloading, phoneloading }) {
                   <div className="image-div">
                     <img
                       className="image"
-                      src={`https://phonebaereview.herokuapp.com/Images/${e.img}`}
+                      src={`https://kind-rose-scallop.cyclic.app/Images/${e.img}`}
                       alt="image"
                     />
                   </div>

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import logo from "./logo.svg";
+
 import "./App.css";
 import axios from "axios";
 import Home from "./pages/Home";
@@ -14,32 +14,21 @@ import AddData from "./pages/AddData";
 import EditData from "./pages/EditData";
 
 function App() {
-  const [image, setImage] = useState("");
-  const [text, setText] = useState("");
   const [newsData, setNewsData] = useState([]);
   const [phoneData, setPhoneData] = useState([]);
   const [newloading, setNewLoading] = useState(true);
   const [phoneloading, setPhoneLoading] = useState(true);
 
-  /****** Context api useState hook */
-  // const [nameContext, setNameContext] = useState("");
-  // const [ratingContext, setRatingContext] = useState();
-  // const [tipsContext, setTipsContext] = useState("");
-  // const [inforContext, setInforContext] = useState("");
-  // const [priceContext, setPriceContext] = useState();
-  // const [authorContext, setAuthorContext] = useState("");
-  // const [goodstuffContext, setGoodstuffContext] = useState("");
-  // const [badstuffContext, setBadstuffContext] = useState("");
-  // const [imgContext, setImgContext] = useState("");
-
   useEffect(() => {
     /******* news data api of third party from hacker api */
     const options = {
       method: "GET",
-      url: `https://tech-news3.p.rapidapi.com/venturebeat`,
+      url: "https://bing-news-search1.p.rapidapi.com/news",
+      params: { safeSearch: "Off", textFormat: "Raw" },
       headers: {
-        "x-rapidapi-host": "tech-news3.p.rapidapi.com",
-        "x-rapidapi-key": "51fa1f2a40mshe0b6b6e99611d99p1c6332jsn9b7eda1a2bc7",
+        "X-BingApis-SDK": "true",
+        "X-RapidAPI-Key": "b119baaecbmshf414ee52c7ec3a8p13d30bjsn485dd4c6b401",
+        "X-RapidAPI-Host": "bing-news-search1.p.rapidapi.com",
       },
     };
 
@@ -47,7 +36,7 @@ function App() {
       .request(options)
       .then(function (response) {
         setNewLoading(false);
-        setNewsData(response.data);
+        setNewsData(response.data.value);
       })
       .catch(function (error) {
         console.error(error);
@@ -55,7 +44,7 @@ function App() {
 
     /******* get request Phone Data api */
     axios
-      .get("https://phonebaereview.herokuapp.com/api/upload")
+      .get("https://kind-rose-scallop.cyclic.app/getreviews")
       .then((response) => {
         setPhoneLoading(false);
         setPhoneData(response.data);
@@ -64,27 +53,6 @@ function App() {
   }, []);
 
   const sliceData = newsData.slice(1, 4);
-
-  // const sendingdata = () => {
-  //   const formData = new FormData();
-  //   formData.append("name", text);
-  //   formData.append("rating", image);
-  //   formData.append("tips", text);
-  //   formData.append("infor", image);
-  //   formData.append("price", text);
-  //   formData.append("author", image);
-  //   formData.append("goodstuff", text);
-  //   formData.append("badstuff", image);
-  //   formData.append("image", text);
-
-  //   /******* post data request to server api*/
-  //   axios
-  //     .post("http://localhost:8000/api/upload", formData)
-  //     .then((res) => {
-  //       alert("File Upload success");
-  //     })
-  //     .catch((err) => alert("File Upload Error"));
-  // };
 
   return (
     <div className="App">

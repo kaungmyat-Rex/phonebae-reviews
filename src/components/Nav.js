@@ -20,7 +20,7 @@ function Nav() {
   const showingSide = () => {
     setSideShow(!sideShow);
   };
-  console.log(sideShow);
+
   return (
     <div className="main-nav">
       <div className="border-nav">

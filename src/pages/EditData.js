@@ -13,8 +13,6 @@ function EditData({ phoneData }) {
   const [editauthor, setEditAuthor] = useState("");
   const [editgoodstuff, setEditGoodstuff] = useState("");
   const [editbadstuff, setEditBadstuff] = useState("");
-  const [image, setImage] = useState("");
-  const [getdata, setGetdata] = useState([]);
 
   const { id } = useParams();
 
@@ -87,7 +85,7 @@ function EditData({ phoneData }) {
     formData.append("badstuff", editbadstuff);
 
     axios
-      .patch(`https://phonebaereview.herokuapp.com/api/upload/${id}`, {
+      .patch(`https://kind-rose-scallop.cyclic.app/getreviews/${id}`, {
         name: editname,
         rating: editrating,
         tips: edittips,

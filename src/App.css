@@ -352,6 +352,7 @@
   transform: rotate(-45deg);
   top: 243px;
   left: -30px;
+  display: none;
 }
 
 .arrow-back-B {
@@ -362,6 +363,7 @@
   transform: rotate(-45deg);
   top: -30px;
   left: 360px;
+  display: none;
 }
 
 .divider-second {
@@ -549,7 +551,8 @@
 
 .line {
   margin-top: 100px;
-  width: 500px;
+  margin-bottom: 25px;
+  width: 280px;
   height: 3px;
   background-color: #903749;
 }
@@ -3140,7 +3143,7 @@ a {
 
 @media only screen and (max-width: 498px) and (min-width: 320px) {
   .section-nav {
-    width: 320px;
+    width: 380px;
     justify-content: space-between;
     align-items: center;
   }
@@ -3301,15 +3304,15 @@ a {
   /************ section- A ******************/
 
   .divider {
-    width: 320px;
+    width: 380px;
   }
 
   .section-A-main {
-    width: 320px;
+    width: 380px;
   }
 
   .section-A-left {
-    width: 300px;
+    width: 310px;
   }
 
   .A-text1 {
@@ -3318,10 +3321,11 @@ a {
 
   .mark {
     position: absolute;
-    left: 230px;
+    left: 260px;
     top: 106px;
     color: white;
     font-size: 58px;
+    display: none;
   }
 
   .A-para {
@@ -3334,7 +3338,7 @@ a {
 
   .phone-news {
     width: 200px;
-    left: 64px;
+    left: 84px;
     top: 115px;
   }
 
@@ -3343,13 +3347,13 @@ a {
   }
   /************ section- B ******************/
   .section-B-main {
-    width: 320px;
+    width: 380px;
     height: auto;
     flex-direction: column;
   }
 
   .news-div {
-    width: 230px;
+    width: 280px;
     margin-left: 22px;
     box-shadow: #903749 7px 7px;
   }
@@ -3359,7 +3363,7 @@ a {
     font-size: 40px;
 
     transform: rotate(-45deg);
-    top: 210px;
+    top: 220px;
     left: -30px;
   }
 
@@ -3370,16 +3374,16 @@ a {
 
     transform: rotate(-45deg);
     top: -30px;
-    left: 260px;
+    left: 310px;
   }
 
   .divider-second {
-    width: 320px;
+    width: 380px;
   }
 
   .review-title {
     width: 200px;
-    left: 60px;
+    left: 80px;
     top: 65px;
   }
 
@@ -3388,15 +3392,15 @@ a {
   }
   /************ section- C ******************/
   .section-C-main {
-    width: 320px;
+    width: 380px;
   }
 
   .thirddivider {
-    width: 320px;
+    width: 380px;
   }
 
   .section-C-item {
-    width: 320px;
+    width: 380px;
   }
 
   .C-text {
@@ -3423,7 +3427,7 @@ a {
 
     transform: rotate(-45deg);
     top: 235px;
-    left: 20px;
+    left: 50px;
   }
 
   .arrow-back-C {
@@ -3433,7 +3437,7 @@ a {
 
     transform: rotate(-45deg);
     top: -30px;
-    left: 273px;
+    left: 300px;
   }
 
   .button-54 {
@@ -3442,7 +3446,7 @@ a {
   }
 
   .footer-section {
-    width: 320px;
+    width: 380px;
     justify-content: space-between;
   }
   .terms-section li {
@@ -3467,23 +3471,23 @@ a {
   /***********News page query****************/
 
   .section-main-news {
-    width: 320px;
+    width: 380px;
   }
 
   .divider-news-logo {
-    width: 320px;
+    width: 380px;
   }
 
   .news-logo-title {
     width: 170px;
     font-size: 20px;
-    left: 80px;
+    left: 100px;
     top: 65px;
   }
 
   .more-news {
     width: 220px;
-    margin-left: 50px;
+    margin-left: 80px;
   }
 
   .news-right {
@@ -3492,7 +3496,7 @@ a {
   }
 
   .news-page-divider {
-    width: 320px;
+    width: 380px;
     margin-left: 0px;
   }
 
@@ -3511,13 +3515,13 @@ a {
   /***********Reviews page query****************/
 
   .review-page-divider {
-    width: 320px;
+    width: 380px;
     margin-bottom: 70px;
   }
 
   .review-page-logo-text {
-    width: 150px;
-    left: 85px;
+    width: 170px;
+    left: 100px;
     top: 40px;
     font-size: 25px;
   }
@@ -3539,11 +3543,11 @@ a {
   /************About Page Query**********************/
 
   .about-section-main {
-    width: 320px;
+    width: 380px;
   }
 
   .down-about {
-    width: 320px;
+    width: 380px;
     height: auto;
     flex-direction: column;
   }
@@ -3553,18 +3557,18 @@ a {
   }
 
   .down-about-left {
-    width: 320px;
+    width: 380px;
     height: auto;
     border-bottom: 3px solid #903749;
   }
 
   .about-text-divider {
     height: 40px;
-    width: 320px;
+    width: 380px;
   }
 
   .about-text-title {
-    left: 85px;
+    left: 105px;
     top: -1px;
   }
 
@@ -3575,70 +3579,79 @@ a {
   }
 
   .down-about-right {
-    width: 320px;
+    width: 380px;
     height: auto;
   }
 
   .about-contact-divider {
-    width: 320px;
+    width: 380px;
   }
 
   .about-contact-title {
-    left: 85px;
+    width: 180px;
+    left: 100px;
   }
 
   /**************** Single-page-query*******************/
 
   .section-single-main {
-    width: 320px;
+    width: 380px;
   }
 
   .divider-single {
-    width: 320px;
+    width: 380px;
   }
 
   .divider-title {
     width: 200px;
-    left: 60px;
+    left: 90px;
     font-size: 25px;
     top: 40px;
   }
 
   .single-info-boder {
-    width: 300px;
+    width: 350px;
+  }
+
+  .single-info-text {
+    text-indent: 100px;
+    text-align: justify;
+    font-size: 17px;
+    color: rgb(192, 192, 192);
+    line-height: 40px;
   }
   .stuff {
-    width: 300px;
+    width: 345px;
     flex-direction: column;
   }
 
   .goodstuff {
-    width: 295px;
+    width: 100%;
     height: auto;
   }
   .badstuff {
-    width: 295px;
+    width: 100%;
     height: auto;
   }
 
   .good-text {
-    left: 70px;
+    left: 100px;
   }
 
   .bad-text {
-    left: 75px;
+    left: 100px;
   }
 
   .single-body {
-    width: 320px;
+    width: 380px;
     flex-direction: column;
   }
   .single-img {
-    width: 320px;
+    width: 380px;
   }
   .single-img-image {
     width: 260px;
-    margin-left: 20px;
+    margin-left: 50px;
   }
   .single-divider-line {
     display: none;
@@ -3647,7 +3660,7 @@ a {
   .single-infoList {
     width: 300px;
 
-    margin-left: 10px;
+    margin-left: 40px;
   }
   .single-names-text {
     width: 230px;

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Footer from "../components/Footer";
 import Nav from "../components/Nav";
-import { Link } from "react-router-dom";
+
 import Loading from "../components/Loading";
 
 function News({ newsData, newloading }) {
@@ -41,12 +41,16 @@ function News({ newsData, newloading }) {
                 <div style={{ zIndex: "1" }} key={index}>
                   <div className="news-main-div">
                     <div className="news-left">
-                      <img className="news-image" src={e.img} alt="" />
+                      <img
+                        className="news-image"
+                        src={e.image.thumbnail.contentUrl}
+                        alt=""
+                      />
                     </div>
                     <div className="news-right">
-                      <h3 className="news-datetime">{e.dateTime}</h3>
-                      <h3 className="news-title-page">{e.title}</h3>
-                      <a href={e.link}>
+                      <h3 className="news-datetime">{e.datePublished}</h3>
+                      <h3 className="news-title-page">{e.name}</h3>
+                      <a href={e.url}>
                         {" "}
                         <button className="button-55">Read New</button>
                       </a>

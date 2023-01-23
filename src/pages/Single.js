@@ -1,10 +1,10 @@
-import React, { useContext, useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import Nav from "../components/Nav";
 
 import axios from "axios";
 import Footer from "../components/Footer";
 
-import { Link, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import Loading from "../components/Loading";
 
 function Single() {
@@ -15,7 +15,7 @@ function Single() {
   console.log(id);
   useEffect(() => {
     axios
-      .get(`https://phonebaereview.herokuapp.com/api/upload/${id}`)
+      .get(`https://kind-rose-scallop.cyclic.app/getreviews/${id}`)
       .then((response) => {
         setSingleloading(false);
         setGetData([response.data]);
@@ -54,7 +54,7 @@ function Single() {
                   <div className="single-img">
                     <img
                       className="single-img-image"
-                      src={`https://phonebaereview.herokuapp.com/Images/${e.img}`}
+                      src={`https://kind-rose-scallop.cyclic.app/Images/${e.img}`}
                       alt=""
                     />
                   </div>
