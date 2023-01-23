@@ -3,8 +3,8 @@ import axios from "axios";
 import AdminNav from "../components/AdminNav";
 import SideAdminNav from "../components/SideAdminNav";
 import Footer from "../components/Footer";
-import { storage } from "../components/firebase";
-import { ref, uploadBytes, getDownloadURL } from "firebase/storage";
+// import { storage } from "../components/firebase";
+// import { ref, uploadBytes, getDownloadURL } from "firebase/storage";
 
 function AddData() {
   const [name, setName] = useState("");
@@ -40,17 +40,17 @@ function AddData() {
       .catch((err) => alert("File Upload Error"));
   };
 
-  const testfun = async () => {
-    const imgref = ref(storage, `storeImg/${storeimage.name + Date.now()}`);
+  // const testfun = async () => {
+  //   const imgref = ref(storage, `storeImg/${storeimage.name + Date.now()}`);
 
-    uploadBytes(imgref, storeimage).then(() => {
-      alert("image uploaded");
-    });
-    await getDownloadURL(imgref).then((url) => {
-      setLinkimage(url);
-    });
-  };
-  console.log(linkimage);
+  //   uploadBytes(imgref, storeimage).then(() => {
+  //     alert("image uploaded");
+  //   });
+  //   await getDownloadURL(imgref).then((url) => {
+  //     setLinkimage(url);
+  //   });
+  // };
+  // console.log(linkimage);
   return (
     <div>
       <AdminNav />
