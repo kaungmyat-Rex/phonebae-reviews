@@ -23,12 +23,16 @@ function App() {
     /******* news data api of third party from hacker api */
     const options = {
       method: "GET",
-      url: "https://bing-news-search1.p.rapidapi.com/news",
-      params: { safeSearch: "Off", textFormat: "Raw" },
+      url: "https://news-api14.p.rapidapi.com/top-headlines",
+      params: {
+        country: "us",
+        language: "en",
+        pageSize: "10",
+        category: "techs",
+      },
       headers: {
-        "X-BingApis-SDK": "true",
-        "X-RapidAPI-Key": "b119baaecbmshf414ee52c7ec3a8p13d30bjsn485dd4c6b401",
-        "X-RapidAPI-Host": "bing-news-search1.p.rapidapi.com",
+        "X-RapidAPI-Key": "51fa1f2a40mshe0b6b6e99611d99p1c6332jsn9b7eda1a2bc7",
+        "X-RapidAPI-Host": "news-api14.p.rapidapi.com",
       },
     };
 
@@ -36,7 +40,7 @@ function App() {
       .request(options)
       .then(function (response) {
         setNewLoading(false);
-        setNewsData(response.data.value);
+        setNewsData(response.data.articles);
       })
       .catch(function (error) {
         console.error(error);
@@ -53,6 +57,7 @@ function App() {
   }, []);
 
   const sliceData = newsData.slice(1, 4);
+  console.log(newsData);
 
   return (
     <div className="App">

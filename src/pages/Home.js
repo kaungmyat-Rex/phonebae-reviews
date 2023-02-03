@@ -71,14 +71,14 @@ function Home({ sliceData, phoneData, newloading, phoneloading }) {
           ) : (
             <div className="section-B-main">
               {sliceData.map((e, index) => (
-                <a href={e.link} key={index}>
+                <a href={e.url} key={index}>
                   <div className="news-div">
                     <div className="news-header">
                       <ImNewspaper className="newsicon" />
                       <h3 className="recent-news">Recent News</h3>
                     </div>
-                    <h3 className="news-date">{e.datePublished}</h3>
-                    <p className="news-title">{e.name.substring(0, 100)}...</p>
+                    <h3 className="news-date">{e.published_date}</h3>
+                    <p className="news-title">{e.title.substring(0, 100)}...</p>
                     <MdOutlineArrowBackIosNew className="arrow-front-B" />
                     <MdOutlineArrowForwardIos className="arrow-back-B" />
                   </div>
