@@ -77,7 +77,7 @@ function Home({ sliceData, phoneData, newloading, phoneloading }) {
                       <ImNewspaper className="newsicon" />
                       <h3 className="recent-news">Recent News</h3>
                     </div>
-                    <h3 className="news-date">{e.published_date}</h3>
+                    <h3 className="news-date">{e.publishedAt}</h3>
                     <p className="news-title">{e.title.substring(0, 100)}...</p>
                     <MdOutlineArrowBackIosNew className="arrow-front-B" />
                     <MdOutlineArrowForwardIos className="arrow-back-B" />

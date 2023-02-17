@@ -23,10 +23,13 @@ function About() {
                   </h3>
                 </div>
                 <p className="about-text">
-                  Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                  Provident labore corporis aliquid voluptate est hic ab sit
-                  dolor quod error, animi sunt natus consequatur, quidem illum
-                  porro. Suscipit, illo cupiditate!
+                  We review everything about mobile phone platform where users
+                  can find detailed and impartial reviews of various smartphones
+                  and related technology products. The website typically
+                  includes articles, videos, and other multimedia content that
+                  provide in-depth analysis of the latest devices, as well as
+                  older models, and their features, performance, design, and
+                  overall user experience.
                 </p>
               </div>
               <div className="down-about-right">

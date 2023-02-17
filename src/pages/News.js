@@ -43,12 +43,12 @@ function News({ newsData, newloading }) {
                     <div className="news-left">
                       <img
                         className="news-image"
-                        src="" //{e.image.thumbnail.contentUrl}
+                        src={e.urlToImage} //{e.image.thumbnail.contentUrl}
                         alt=""
                       />
                     </div>
                     <div className="news-right">
-                      <h3 className="news-datetime">{e.published_date}</h3>
+                      <h3 className="news-datetime">{e.publishedAt}</h3>
                       <h3 className="news-title-page">{e.title}</h3>
                       <a href={e.url}>
                         {" "}

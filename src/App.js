@@ -21,29 +21,38 @@ function App() {
 
   useEffect(() => {
     /******* news data api of third party from hacker api */
-    const options = {
-      method: "GET",
-      url: "https://news-api14.p.rapidapi.com/top-headlines",
-      params: {
-        country: "us",
-        language: "en",
-        pageSize: "10",
-        category: "techs",
-      },
-      headers: {
-        "X-RapidAPI-Key": "51fa1f2a40mshe0b6b6e99611d99p1c6332jsn9b7eda1a2bc7",
-        "X-RapidAPI-Host": "news-api14.p.rapidapi.com",
-      },
-    };
+    // const options = {
+    //   method: "GET",
+    //   url: "https://news-api14.p.rapidapi.com/top-headlines",
+    //   params: {
+    //     country: "us",
+    //     language: "en",
+    //     pageSize: "10",
+    //     category: "techs",
+    //   },
+    //   headers: {
+    //     "X-RapidAPI-Key": "51fa1f2a40mshe0b6b6e99611d99p1c6332jsn9b7eda1a2bc7",
+    //     "X-RapidAPI-Host": "news-api14.p.rapidapi.com",
+    //   },
+    // };
+
+    // axios
+    //   .request(options)
+    //   .then(function (response) {
+    //     setNewLoading(false);
+    //     setNewsData(response.data.articles);
+    //   })
+    //   .catch(function (error) {
+    //     console.error(error);
+    //   });
 
     axios
-      .request(options)
-      .then(function (response) {
+      .get(
+        "https://newsapi.org/v2/everything?q=apple&from=2023-02-16&to=2023-02-16&sortBy=popularity&apiKey=8b1444b75dce4b77a8945b36517ace18"
+      )
+      .then((responce) => {
         setNewLoading(false);
-        setNewsData(response.data.articles);
-      })
-      .catch(function (error) {
-        console.error(error);
+        setNewsData(responce.data.articles);
       });
 
     /******* get request Phone Data api */
@@ -57,7 +66,6 @@ function App() {
   }, []);
 
   const sliceData = newsData.slice(1, 4);
-  console.log(newsData);
 
   return (
     <div className="App">
