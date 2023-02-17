@@ -43,7 +43,7 @@ function News({ newsData, newloading }) {
                     <div className="news-left">
                       <img
                         className="news-image"
-                        src={e.urlToImage} //{e.image.thumbnail.contentUrl}
+                        src={e.image} //{e.image.thumbnail.contentUrl}
                         alt=""
                       />
                     </div>

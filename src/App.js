@@ -48,7 +48,7 @@ function App() {
 
     axios
       .get(
-        "https://newsapi.org/v2/everything?q=apple&from=2023-02-16&to=2023-02-16&sortBy=popularity&apiKey=8b1444b75dce4b77a8945b36517ace18"
+        "https://gnews.io/api/v4/top-headlines?category=science&lang=en&country=us&max=10&apikey=ac05e7a27c1acebb1b194af123aa66b0"
       )
       .then((responce) => {
         setNewLoading(false);
