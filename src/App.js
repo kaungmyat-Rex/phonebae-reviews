@@ -57,7 +57,7 @@ function App() {
 
     /******* get request Phone Data api */
     axios
-      .get("https://kind-rose-scallop.cyclic.app/getreviews")
+      .get("https://phonebae-reviews-server.onrender.com/getreviews")
       .then((response) => {
         setPhoneLoading(false);
         setPhoneData(response.data);

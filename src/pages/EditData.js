@@ -85,7 +85,7 @@ function EditData({ phoneData }) {
     formData.append("badstuff", editbadstuff);
 
     axios
-      .patch(`https://kind-rose-scallop.cyclic.app/getreviews/${id}`, {
+      .patch(`https://phonebae-reviews-server.onrender.com/getreviews/${id}`, {
         name: editname,
         rating: editrating,
         tips: edittips,

@@ -65,7 +65,7 @@ function Reviews({ phoneData, phoneloading }) {
                       <div className="image-div">
                         <img
                           className="image"
-                          src={`https://kind-rose-scallop.cyclic.app/Images/${e.img}`}
+                          src={`https://phonebae-reviews-server.onrender.com/Images/${e.img}`}
                           alt="image"
                         />
                       </div>
@@ -106,7 +106,7 @@ function Reviews({ phoneData, phoneloading }) {
                         <div className="image-div">
                           <img
                             className="image"
-                            src={`https://kind-rose-scallop.cyclic.app/Images/${e.img}`}
+                            src={`https://phonebae-reviews-server.onrender.com/Images/${e.img}`}
                             alt="image"
                           />
                         </div>

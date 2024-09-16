@@ -15,7 +15,7 @@ function Single() {
   console.log(id);
   useEffect(() => {
     axios
-      .get(`https://kind-rose-scallop.cyclic.app/getreviews/${id}`)
+      .get(`https://phonebae-reviews-server.onrender.com/getreviews/${id}`)
       .then((response) => {
         setSingleloading(false);
         setGetData([response.data]);
@@ -54,7 +54,7 @@ function Single() {
                   <div className="single-img">
                     <img
                       className="single-img-image"
-                      src={`https://kind-rose-scallop.cyclic.app/Images/${e.img}`}
+                      src={`https://phonebae-reviews-server.onrender.com/Images/${e.img}`}
                       alt=""
                     />
                   </div>

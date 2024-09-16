@@ -33,7 +33,7 @@ function AddData() {
 
     /******* post data request to server api*/
     axios
-      .post("https://kind-rose-scallop.cyclic.app/upload", formData)
+      .post("https://phonebae-reviews-server.onrender.com/upload", formData)
       .then((res) => {
         alert("File Upload success");
       })
